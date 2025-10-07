@@ -3,7 +3,7 @@
 "r" = read
 "w" = write
 "a" = append
-"b" = binary
+"b" = binary ("rb" = read binary, "wb" = write binary)
 '''
 
 #single insert
@@ -25,10 +25,23 @@
 # file_object.writelines(lines)
 
 #read
-print("Append Insert")
-file_object = open(file="test.txt",mode="r")
+# print("Append Insert")
+# file_object = open(file="test.txt",mode="r")
 # print(file_object.readline()) #read one line, First Line
-line = file_object.readlines()
-print(line) #read one line, First Line
+# line = file_object.readlines()
+# file_object.close()
+# print(line,type(line)) #read one line, First Line
 # print(file_object.read()) #read all line
 
+#use with = close file automatically
+# with open(file="test.txt",mode="r") as file_object:
+#     content = file_object.read()
+#     print(content)
+
+#read binary
+with open('image.png','rb') as image_file:
+    image_data = image_file.read()
+    print(image_data)
+#write binary
+with open('copied_image.png','wb') as new_image_file:
+    new_image_file.write(image_data)
