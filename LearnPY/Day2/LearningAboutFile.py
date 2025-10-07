@@ -19,8 +19,16 @@
 # file_object.writelines(lines)
 
 #append insert
+# print("Append Insert")
+# lines = ["Fourth Line.\n","Fifth Line.\n"]
+# file_object = open(file="test.txt",mode="a")
+# file_object.writelines(lines)
+
+#read
 print("Append Insert")
-lines = ["Fourth Line.\n","Fifth Line.\n"]
-file_object = open(file="test.txt",mode="a")
-file_object.writelines(lines)
+file_object = open(file="test.txt",mode="r")
+# print(file_object.readline()) #read one line, First Line
+line = file_object.readlines()
+print(line) #read one line, First Line
+# print(file_object.read()) #read all line
 
