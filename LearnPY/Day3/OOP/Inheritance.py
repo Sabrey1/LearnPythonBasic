@@ -23,7 +23,7 @@ class Cat(animal):
         super().__init__(name)
         self.color = color
     
-    #method overiding
+    # method overiding
     def speak(self):
         return f"{self.name} meows."
 
@@ -39,3 +39,27 @@ mycat = Cat("Whiskers","Black")
 print(mycat.name)
 print(mycat.color)
 print(mycat.speak())
+
+
+
+# class Animal:
+#     def __init__(self,name,):
+#         self.name = name
+         
+#     def speak(self,name):
+#         return f"{self.name} make a sound."
+    
+# class Dog(Animal):
+#     def __init__(self,name,breed):
+#         super().__init__(name)
+#         self.breed = breed
+
+#     def speak(self):
+#         return f"{self.name} barks."
+
+
+#object 
+# mydog = Dog("kiki","Golden Retriever")
+# print(mydog.name)
+# print(mydog.breed)
+# print(mydog.speak())
