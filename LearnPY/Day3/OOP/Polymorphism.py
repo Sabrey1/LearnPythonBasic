@@ -27,17 +27,8 @@ guitar = Guitar(brand="Fender", model="AcousticX1")
 piano = Piano(brand="Yamaha", model="YX1")
 drum = Drum(brand="Yamaha", model="YX1")
 
-Instrument = guitar
-Instrument.play()
-print(Instrument.brand)
-print(Instrument.model)
-
-Instrument = piano
-Instrument.play()
-print(Instrument.brand)
-print(Instrument.model)
-
-Instrument = drum
-Instrument.play()
-print(Instrument.brand)
-print(Instrument.model)
+for Instrument in (guitar,piano,drum):
+    Instrument.play()
+    print(Instrument.brand)
+    print(Instrument.model)
+    print()
